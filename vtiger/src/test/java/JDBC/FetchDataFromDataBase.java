@@ -29,4 +29,6 @@ public class FetchDataFromDataBase {
 
 	}
 
+	System.out.println("Hello");
+
 }
