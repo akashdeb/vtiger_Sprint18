@@ -42,15 +42,96 @@
 			<version>8.3.0</version>
 		</dependency>
 
-<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-<dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>5.1.1</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.1</version>
+		</dependency>
 
 
 
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>smoke</id>
+
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.2.5</version>
+							<configuration>
+								<suiteXmlFiles>
+								
+									<suiteXmlFile>src/test/resources/xmlFiles/smokeTesting.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+
+
+
+		</profile>
+		
+		<profile>
+			<id>regression</id>
+
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.2.5</version>
+							<configuration>
+								<suiteXmlFiles>
+								
+									<suiteXmlFile>/src/test/resources/xmlFiles/regressionTesting.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+
+
+
+		</profile>
+		
+		<profile>
+			<id>parallel</id>
+
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.2.5</version>
+							<configuration>
+								<suiteXmlFiles>
+								
+									<suiteXmlFile>src/test/resources/xmlFiles/ParallelExecution.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+
+
+
+		</profile>
+
+	</profiles>
 
 </project>

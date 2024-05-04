@@ -22,7 +22,7 @@ import vtiger.pomRepo.OrganizationPage;
 @Listeners(vtiger.genericUtility.ItestListenersImplemantationClass.class)
 public class ToCreateOpportunityTest extends BaseClass {
 
-	@Test(retryAnalyzer = vtiger.genericUtility.IRetryAnalyzerImplementationClass.class)
+	@Test(retryAnalyzer = vtiger.genericUtility.IRetryAnalyzerImplementationClass.class, groups="regression")
 	public void createOpportunityAndVerifyOpportunity() throws EncryptedDocumentException, IOException {
 
 		String organizationName = eUtils.fetchStringDataFromExcelSheet(IPathConstant.ORGANIZATION_SHEAT_NAME, 1, 0);

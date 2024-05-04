@@ -1,0 +1,4 @@
+JDBC\WriteDataIntoDB.class
+vtiger\opportunity_module\ToCreateOpportunityTest.class
+JDBC\FetchDataFromDataBase.class
+vtiger\leads_module\ToCreateALeadTest.class
