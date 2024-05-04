@@ -26,9 +26,9 @@ public class FetchDataFromDataBase {
 		}
 		//CLose Data Base
 		connection.close();
-
+		System.out.println("Hello");
 	}
 
-	System.out.println("Hello");
+	
 
 }
