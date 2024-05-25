@@ -47,7 +47,6 @@ public class ToCreateOpportunityTest extends BaseClass {
 		CreatingNewOpportunity createOpportunity = new CreatingNewOpportunity(driver);
 		OpportunityInformationPage opportunityInfo = new OpportunityInformationPage(driver);
 
-		Assert.fail();
 		home.clickOnOrganizationsModule();
 		organization.clickOnAddOrganizationButton();
 		createOrganization.enterOrganizationName(organizationName);
