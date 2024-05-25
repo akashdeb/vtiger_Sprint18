@@ -42,6 +42,8 @@ public class ToCreateALeadTest extends BaseClass {
 		System.out.println("Pass: the lead has been created");
 		System.out.println("Pass: the lead has been created");
 		System.out.println("Pass: the lead has been created");
+		
+		System.out.println("Pass: the lead has been created");
 
 
 		
